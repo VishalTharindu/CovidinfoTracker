@@ -10,6 +10,10 @@
 .formControl{
     width: 100%;
     justify-content: center;
+    color:#fff !important;
+}
+.countrypik{
+    color:#fff !important;
 }
 
 @media only screen and (min-width: 100%){

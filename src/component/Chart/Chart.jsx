@@ -15,7 +15,6 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) =>{
         }
         fetchApi();
     }, [])
-
     const lineChart = (
         dailyData.length ?(
             <Line 
@@ -24,7 +23,7 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) =>{
                     datasets:[{
                         data:dailyData.map(({confirmed}) =>confirmed),
                         label:"Infected",
-                        borderColor:"#3333ff",
+                        borderColor:"rgba(0, 0, 255, 0.5)",
                         fill:true
                     }, {
                         data:dailyData.map(({deaths}) =>deaths),
@@ -48,9 +47,9 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) =>{
                     datasets:[{
                         label:"People",
                         backgroundColor:[
-                            'rgba(0, 0, 255, 0.5)',
-                            'rgba(0, 255, 0, 0.5)', 
-                            'rgba(255, 0, 0, 0.5)'
+                            'rgba(2,0,36, 1)',
+                            'rgba(5,122,40)', 
+                            'rgba(255, 0, 0, 0.8)'
                         ],
                         data:[confirmed.value, recovered.value, deaths.value],
                     }]
